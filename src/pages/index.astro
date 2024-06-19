@@ -1,5 +1,6 @@
 ---
-
+import { Image } from 'astro:assets';
+import uhOhImage from '../assets/uh oh.webp';
 ---
 
 <html lang="en">
@@ -11,6 +12,13 @@
 		<title>Astro</title>
 	</head>
 	<body>
+		<!-- This works no problem as an import: -->
+		<Image src={uhOhImage} alt="Star logo"></Image>
 		<h1>Astro</h1>
+
+		<p>
+			Here's where things go wrong:
+			<a href="/uh oh">Uh Oh!</a>
+		</p>
 	</body>
 </html>
